@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script src="game.js"></script>
+    <div class="container">
+        <div id="curtain"></div>
+        <div id="main-title">
+            <h1>ROCK PAPER SCISSORS</h1>
+        </div>
+        <div id="main-display">
+            <div class="pannel">
+                <h1>YOU</h1>
+                <button class="option" value="rock">Rock</button>
+                <button class="option" value="paper">Paper</button>
+                <button class="option" value="scissors">Scissors</button>
+            </div>
+            <div id="match-area" class="pannel">
+                <div id="title"></div>
+                <div id="counter">
+                    <div id="round_count">
+                        <h2>Round: -</h2>
+                    </div>
+                    <div id="player_score">
+                        <h2>Player: -</h2>
+                    </div>
+                    <div id="computer_score">
+                        <h2>Computer: -</h2>
+                    </div>
+                </div>
+                <div id="match">
+                    <div class="round-result"></div>
+                    <div class="round-result"></div>
+                </div>
+            </div>
+            <div class="pannel">
+                <h1>COMPUTER</h1>
+                <div class="option">
+                    <p>Rock</p>
+                </div>
+                <div class="option">
+                    <p>Paper</p>
+                </div>
+                <div class="option">
+                    <p>Scissors</p>
+                </div>
+            </div>
+        </div>
+    </div> <!--container-->
+
+    <div id="sounds">
+        <audio id="winner-sfx" src="sounds/mixkit-fail-drum-and-bells-571.wav"></audio>
+        <audio id="loser-sfx" src="sounds/cartoon_fail_strings_trumpet.mp3"></audio>
+    </div>
 </body>
 </html>

@@ -1,0 +1,144 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#curtain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    visibility: visible;
+}
+
+.container{
+    color: goldenrod;
+    position: absolute;
+    background-color: #252c35;
+    border: black 1px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container > #main-title{
+    font-size: 20pt;
+    text-decoration: underline;
+    color: #212225;
+}
+
+#main-display{
+    position:relative;
+    display: grid;
+    background-color: goldenrod;
+    height: 80%;
+    width: 90%;
+    grid-template-columns: 1.5fr 4fr 1.5fr;
+    grid-template-rows: 100%;
+    column-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.pannel{
+    color: goldenrod;
+    background-color: #212225;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid black;
+    row-gap: 30px;
+}
+
+#match-area{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+}
+
+#match-area > #title {
+    color: white;
+    background-color: #212225;
+    font-size: 16pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+}
+
+#match-area > #counter{
+    display: flex;
+    flex-direction: row;
+    background-color: #212225;
+    align-items: center;
+    justify-content: flex-start;
+    grid-row: 2;
+    column-gap: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+#counter > #round_count, #player_score, #computer_score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#match-area > #match {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2px;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+}
+
+#match > .round-result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212225;
+    width: 100%;
+    height: 100%;
+}
+
+.option{
+    color: silver;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 58, 70);
+    border: rgb(255, 255, 255) 1px solid;
+    height: 20%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+button[class="option"]:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 3px rgba(209, 174, 0, 0.80);
+    border-color:rgba(255, 230, 0, 0.8)
+}
+
+button[class="option"]:active{
+    transform: scale(1);
+}
